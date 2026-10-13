@@ -1,0 +1,341 @@
+    /* =========================
+    Browse Properties Page
+    ========================= */
+
+    .browse-properties {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 32px;
+    box-sizing: border-box;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: "Inter", sans-serif;
+    }
+
+    /* =========================
+    Page Header
+    ========================= */
+
+    .browse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    }
+
+    .browse-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background-color: #D1FAE5;
+    color: #065F46;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    }
+
+    .browse-header h1 {
+    margin: 18px 0 10px;
+    color: #0F172A;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    }
+
+    .browse-header p {
+    max-width: 600px;
+    margin: 0;
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.8;
+    }
+
+    /* =========================
+    Properties Section
+    ========================= */
+
+    .properties-section {
+    width: 100%;
+    min-width: 0;
+    }
+
+    .properties-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+    }
+
+    .properties-heading h2 {
+    margin: 0;
+    color: #0F172A;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    }
+
+    .properties-heading p {
+    margin: 0;
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.6;
+    }
+
+    /* =========================
+    Responsive Properties Grid
+    ========================= */
+
+    .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+    }
+
+    .properties-grid > * {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    }
+
+    /* =========================
+    Property Card
+    ========================= */
+
+    .properties-grid .MuiCard-root {
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    /* Card Hover */
+
+    @media (hover: hover) {
+    .properties-grid .MuiCard-root:hover {
+        transform: translateY(-6px);
+        border-color: #A7DCC5;
+        box-shadow: 0 16px 32px rgba(15, 23, 42, 0.10);
+    }
+    }
+
+    /* Card Image */
+
+    .properties-grid .MuiCardMedia-root {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background-color: #E2E8F0;
+    transition: transform 0.35s ease;
+    }
+
+    @media (hover: hover) {
+    .properties-grid .MuiCard-root:hover .MuiCardMedia-root {
+        transform: scale(1.025);
+    }
+    }
+
+    /* Card Content */
+
+    .properties-grid .MuiCardContent-root {
+    padding: 20px;
+    }
+
+    .properties-grid .MuiCardContent-root:last-child {
+    padding-bottom: 20px;
+    }
+
+    /* Card Title */
+
+    .properties-grid .MuiCardContent-root .MuiTypography-h6 {
+    margin-bottom: 8px;
+    color: #0F172A;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    }
+
+    /* Card Text */
+
+    .properties-grid .MuiCardContent-root .MuiTypography-root {
+    font-family: "Inter", sans-serif;
+    }
+
+    /* Location Icon */
+
+    .properties-grid .MuiSvgIcon-root {
+    flex-shrink: 0;
+    }
+
+    /* Investment Details */
+
+    .properties-grid .MuiCardContent-root > .MuiBox-root {
+    min-width: 0;
+    }
+
+    /* Buttons */
+
+    .properties-grid .MuiButton-root {
+    min-height: 36px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .properties-grid .MuiButton-root:hover {
+    background-color: #A7F3D0;
+    transform: translateY(-1px);
+    }
+
+    /* =========================
+    Large Screens
+    ========================= */
+
+    @media (min-width: 1500px) {
+    .browse-properties {
+        padding: 40px;
+    }
+
+    .properties-grid {
+        gap: 28px;
+    }
+    }
+
+    /* =========================
+    Tablet
+    ========================= */
+
+    @media (max-width: 1100px) {
+    .browse-properties {
+        padding: 28px 24px;
+    }
+
+    .properties-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .properties-grid .MuiCardMedia-root {
+        height: 200px;
+    }
+    }
+
+    /* =========================
+    Small Tablet / Mobile
+    ========================= */
+
+    @media (max-width: 700px) {
+    .browse-properties {
+        padding: 24px 18px;
+    }
+
+    .browse-header {
+        margin-bottom: 32px;
+    }
+
+    .browse-header h1 {
+        font-size: 28px;
+        letter-spacing: -0.6px;
+    }
+
+    .browse-header p {
+        font-size: 14px;
+    }
+
+    .properties-heading {
+        margin-bottom: 20px;
+    }
+
+    .properties-heading h2 {
+        font-size: 20px;
+    }
+
+    .properties-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .properties-grid .MuiCardMedia-root {
+        height: 220px;
+    }
+
+    .properties-grid .MuiCardContent-root {
+        padding: 18px;
+    }
+    }
+
+    /* =========================
+    Small Mobile
+    ========================= */
+
+    @media (max-width: 400px) {
+    .browse-properties {
+        padding: 20px 12px;
+    }
+
+    .browse-header h1 {
+        font-size: 25px;
+    }
+
+    .browse-label {
+        font-size: 10px;
+    }
+
+    .properties-grid {
+        gap: 18px;
+    }
+
+    .properties-grid .MuiCardMedia-root {
+        height: 175px;
+    }
+
+    .properties-grid .MuiCardContent-root {
+        padding: 14px;
+    }
+
+    .properties-grid .MuiCardContent-root .MuiTypography-h6 {
+        font-size: 16px;
+    }
+    }
+
+    /* =========================
+    Accessibility
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+    .properties-grid .MuiCard-root,
+    .properties-grid .MuiCardMedia-root,
+    .properties-grid .MuiButton-root {
+        transition: none;
+    }
+
+    .properties-grid .MuiCard-root:hover,
+    .properties-grid .MuiButton-root:hover {
+        transform: none;
+    }
+
+    .properties-grid .MuiCard-root:hover .MuiCardMedia-root {
+        transform: none;
+    }
+    }

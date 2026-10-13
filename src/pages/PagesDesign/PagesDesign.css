@@ -1,0 +1,444 @@
+
+    /* Page */
+
+    .property-details-page {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #F8FAFC;
+    color: #0F172A;
+    font-family: "Inter", sans-serif;
+    }
+
+    .property-page-header {
+    margin-bottom: 28px;
+    }
+
+    .property-label {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #D1FAE5;
+    color: #065F46;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    }
+
+    .property-page-header h1 {
+    margin: 16px 0 10px;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.3;
+    letter-spacing: -0.7px;
+    }
+
+    .property-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    color: #64748B;
+    font-size: 14px;
+    }
+
+    .property-location svg {
+    font-size: 19px;
+    color: #059669;
+    }
+
+    /* Main Layout */
+
+    .property-main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(300px, 1fr);
+    align-items: start;
+    gap: 28px;
+    }
+
+    .property-information {
+    min-width: 0;
+    }
+
+    /* Property Image */
+
+    .property-image-container {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #E2E8F0;
+    }
+
+    .property-main-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .property-type {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 8px 13px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #0F172A;
+    font-size: 12px;
+    font-weight: 600;
+    }
+
+    /* Description and Features */
+
+    .property-description,
+    .property-features {
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    background: #FFFFFF;
+    }
+
+    .property-description h2,
+    .property-features h2 {
+    margin: 0 0 14px;
+    font-size: 19px;
+    font-weight: 700;
+    }
+
+    .property-description p {
+    margin: 0;
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.9;
+    }
+
+    .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    }
+
+    .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding: 14px 10px;
+    border-radius: 10px;
+    background: #F8FAFC;
+    }
+
+    .feature-item > svg {
+    flex-shrink: 0;
+    color: #059669;
+    font-size: 24px;
+    }
+
+    .feature-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    }
+
+    .feature-item span {
+    color: #64748B;
+    font-size: 12px;
+    }
+
+    .feature-item strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    }
+
+    /* Investment Card */
+
+    .investment-card {
+    position: sticky;
+    top: 24px;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    }
+
+    .investment-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    font-weight: 700;
+    }
+
+    .investment-status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #D1FAE5;
+    color: #065F46;
+    font-size: 11px;
+    font-weight: 600;
+    }
+
+    .investment-value,
+    .investment-return,
+    .investment-share-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    }
+
+    .investment-value {
+    display: block;
+    margin-bottom: 22px;
+    }
+
+    .investment-value span,
+    .investment-return span,
+    .investment-share-price span {
+    color: #64748B;
+    font-size: 13px;
+    }
+
+    .investment-value h2 {
+    margin: 8px 0 0;
+    font-size: clamp(25px, 2.5vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    overflow-wrap: anywhere;
+    }
+
+    .investment-return {
+    margin-bottom: 18px;
+    }
+
+    .investment-return strong {
+    color: #059669;
+    font-size: 17px;
+    }
+
+    .investment-share-price strong {
+    color: #0F172A;
+    font-size: 15px;
+    }
+
+    .investment-divider {
+    height: 1px;
+    margin: 24px 0;
+    background: #E2E8F0;
+    }
+
+    /* Funding Progress */
+
+    .shares-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    }
+
+    .shares-heading span {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    }
+
+    .shares-heading strong {
+    color: #065F46;
+    font-size: 15px;
+    }
+
+    .funding-progress {
+    width: 100%;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #E2E8F0;
+    }
+
+    .funding-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #059669;
+    transition: width 0.3s ease;
+    }
+
+    .shares-availability {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    color: #64748B;
+    font-size: 11px;
+    }
+
+    /* Buy Button */
+
+    .buy-shares-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 26px;
+    border: none;
+    border-radius: 10px;
+    background: #065F46;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .buy-shares-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: #047857;
+    }
+
+    .buy-shares-button:disabled {
+    background: #CBD5E1;
+    color: #64748B;
+    cursor: not-allowed;
+    }
+
+    .investment-note {
+    margin: 14px 0 0;
+    color: #94A3B8;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+    }
+
+    /* Not Found */
+
+    .property-not-found {
+    padding: 60px 20px;
+    text-align: center;
+    }
+
+    .property-not-found p {
+    color: #64748B;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1000px) {
+    .property-details-page {
+        padding: 24px;
+    }
+
+    .property-main-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(270px, 0.85fr);
+        gap: 20px;
+    }
+
+    .property-image-container {
+        height: 300px;
+    }
+
+    .investment-card {
+        padding: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+    .property-details-page {
+        padding: 22px 16px;
+    }
+
+    .property-page-header {
+        margin-bottom: 22px;
+    }
+
+    .property-page-header h1 {
+        font-size: 27px;
+    }
+
+    .property-main-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .property-image-container {
+        height: clamp(200px, 58vw, 340px);
+    }
+
+    .property-description,
+    .property-features {
+        margin-top: 18px;
+        padding: 18px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    .investment-card {
+        position: static;
+        padding: 20px;
+    }
+    }
+
+    /* Small Mobile */
+
+    @media (max-width: 380px) {
+    .property-details-page {
+        padding: 18px 12px;
+    }
+
+    .property-page-header h1 {
+        font-size: 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        flex-direction: row;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .investment-card {
+        padding: 16px;
+    }
+    }
+
+    /* Accessibility */
+
+    @media (prefers-reduced-motion: reduce) {
+    .buy-shares-button,
+    .funding-progress-fill {
+        transition: none;
+    }
+
+    .buy-shares-button:hover {
+        transform: none;
+    }
+    }
